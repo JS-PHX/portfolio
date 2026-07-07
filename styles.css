@@ -137,7 +137,7 @@ div {
 
   .overlay p .info {
     font-size: 56px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     margin-bottom: 5px;
     text-shadow: 1px 1px 1px black;
   }
@@ -154,30 +154,30 @@ div {
     padding-right: 2rem;
     font-size: 24px;
     font-weight: bold;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
-  }
+    font-family: 'Space Grotesk', sans-serif;
+    }
 
-  .overlay1 overlay ul li p {
+  .overlay1 .overlay ul li p {
     list-style-type: "-";
     color: #0044ff;
     list-style: none;
     font-size: 32px;
     font-weight: bold;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
-  }
+    font-family: 'Space Grotesk', sans-serif;
+    }
 
   .section .overlay2 .overlay li, .overlay2 overlay {
     text-align: center;
     font-size: 32px;
     padding: 2rem;
     font-weight: bold;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
-  }
+    font-family: 'Space Grotesk', sans-serif;
+    }
 
   .project-overlay {
     text-align: right;
     color: white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 28px;
     font-weight: bold;
   }
