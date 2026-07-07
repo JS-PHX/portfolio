@@ -1,214 +1,258 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 body {
-  background-color: #d1d1d1;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  height: 100%;
-}
+    background-color: #d1d1d1;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow-x: hidden;
+  }
 
 div {
-  height: 100vh;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* ---------- Section / Box containers ---------- */
-
-.section,
-.box {
+.section-home {
   height: 100vh;
-  margin-top: 0;
   scroll-snap-align: start;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 1px;
   font-family: 'Press Start 2P', cursive;
+  /* text-decoration: underline 1rem #586F7C; */
   color: #0B3D91;
   font-size: 3rem;
   position: relative;
   cursor: pointer;
+
 }
 
-.box {
-  background-image: linear-gradient(180deg, #d1d1d100, #4a5a7a, #0B1F4D, black);
-  scroll-snap-stop: always;
+.section, .box {
+  margin-top: 0;
 }
 
-/* ---------- Hover underline animation ---------- */
+.section {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+    font-family: 'Press Start 2P', cursive;
+    /* text-decoration: underline 1rem #586F7C; */
+    color: #0B3D91;
+    font-size: 3rem;
+    position: relative;
+    cursor: pointer;
 
-.hover-underline-animation {
-  display: inline-block;
-  position: relative;
-  user-select: none;
-  cursor: default;
+  }
+
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    user-select: none;
+    cursor: default;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: #FC3D21;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .box {
+    background-image: linear-gradient(180deg, #d1d1d100, #b2b2b2, #868686 ,black);
+    position: relative;
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+    font-family: 'Press Start 2P', cursive;
+    /* text-decoration: underline 1rem #586F7C; */
+    color: #0B3D91;
+    font-size: 3rem;
+    scroll-snap-stop: always;
+    cursor: pointer;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #0B3D91, #0B3D91 ,black);
+    color: #fff;
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    justify-content: center;text-align: center;
+    transition: transform .5s ease;
+    cursor: pointer;
+  }
+  
+  .overlay1, .overlay2 {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #0B3D91;
+    color: white;
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    opacity: 0;
+    cursor: pointer;
+    }
+  
+  .overlay.active, .overlay1.active, .overlay2.active {
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    backdrop-filter: blur(50px);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .overlay p,
+  .overlay li {
+  line-height: 1.25;
 }
 
-.hover-underline-animation:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 5px;
-  bottom: 0;
-  left: 0;
-  background-color: #FC3D21;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
+  .overlay p .info {
+    font-size: 56px;
+    font-family: 'Space Grotesk', sans-serif;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 1px black;
+  }
+  .overlay li {
+    list-style: none;
+    text-align: left;
+    padding: 1.5rem 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+  }
+  
+  .overlay li::before {
+    content: "[ " counter(item) " ]";
+    counter-increment: item;
+    display: block;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.65rem;
+    color: #FFD700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .overlay ul {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    counter-reset: item; 
+  }
 
-.hover-underline-animation:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
+  .overlay1 .overlay ul li p {
+    list-style-type: "-";
+    color: #0B3D91;
+    list-style: none;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Space Grotesk', sans-serif;
+    }
 
-/* ---------- Overlays ---------- */
+  .section .overlay2 .overlay li, .overlay2 .overlay {
+    text-align: center;
+    font-size: 32px;
+    padding: 2rem;
+    font-weight: bold;
+    font-family: 'Space Grotesk', sans-serif;
+    }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, #0B3D91, #0B3D91, black);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transition: transform 0.5s ease;
-  cursor: pointer;
-}
+  .project-overlay {
+    text-align: right;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .project-overlay li {
+    font-size: 32px;
+    font-family: 'Press Start 2P', cursive;
+    color: #FFD700;
+    list-style-type: "-";
+    padding: 2rem;
+  }
 
-.overlay1,
-.overlay2 {
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: #0B3D91;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  opacity: 0;
-  transition: transform 0.25s ease, opacity 0.25s ease;
-  cursor: pointer;
-}
+  .project-overlay li a {
+    color: white;
+    transition: all .5s;
+  }
+  .project-overlay li a:hover {
+    color: #FFD700;
+    transition: all .1s;
+  }
+  
 
-.overlay.active,
-.overlay1.active,
-.overlay2.active {
-  transform: translateX(100%);
-  opacity: 1;
-  backdrop-filter: blur(50px);
-  pointer-events: auto;
-  transition: transform 0.25s ease;
-}
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: #FC3D21;
+    z-index: 9999;
+    transition: width 0.2s ease-out;
+  }
 
-/* ---------- Unified overlay list styling ---------- */
-/* Applies to Education, Projects, and Experience overlays alike */
+  
 
-.overlay ul,
-.overlay1 ul,
-.overlay2 ul,
-.project-overlay {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem;
-  counter-reset: item;
-}
 
-.overlay li,
-.overlay1 li,
-.overlay2 li,
-.project-overlay li {
-  list-style: none;
-  text-align: left;
-  padding: 1.5rem 0;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  color: #fff;
-}
 
-.overlay li::before,
-.overlay1 li::before,
-.overlay2 li::before,
-.project-overlay li::before {
-  content: "[ " counter(item, decimal-leading-zero) " ]";
-  counter-increment: item;
-  display: block;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 0.65rem;
-  color: #FFD700;
-  margin-bottom: 0.5rem;
-  letter-spacing: 1px;
-}
 
-/* Education title/paragraph (nested <p> inside <li>) */
-.overlay1 li p {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  color: #fff;
-}
-
-.overlay1 li p.title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 0.75rem;
-}
-
-/* Project links */
-.project-overlay li a {
-  color: white;
-  transition: color 0.3s ease;
-}
-
-.project-overlay li a:hover {
-  color: #FFD700;
-  transition: color 0.1s ease;
-}
-
-/* ---------- Progress bar ---------- */
-
-.progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 5px;
-  background-color: #FC3D21;
-  z-index: 9999;
-  transition: width 0.2s ease-out;
-}
-
-/* ---------- Game ---------- */
+/* game */
 
 .gameDiv {
   background-image: url("/imgs/spacebg.jpg");
-  background-size: 250% auto;
-  animation: move-background 90s linear infinite alternate;
+  background-size: 250% auto; /* or any other value to adjust the width */
+  animation: move-background 90s linear alternate;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 
 @keyframes move-background {
-  0% { background-position: 0 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
-
 .game {
   width: 100%;
   height: 100vh;
@@ -217,10 +261,11 @@ div {
 
 .character {
   background-image: url('./imgs/astro.png');
-  background-repeat: no-repeat;
   position: relative;
   top: 150px;
   left: 50px;
+  background-repeat: no-repeat;
+  /* background-color: red; */
   width: 90px;
   height: 100px;
 }
@@ -230,62 +275,83 @@ div {
   position: relative;
   top: 165px;
   left: 480px;
+  /* background-color: blue; */
   width: 50px;
   height: 50px;
   animation: block 2s infinite linear;
 }
 
 @keyframes jump {
-  0% { top: 150px; }
-  50% { top: 0px; }
-  100% { top: 150px; }
+  0%{top: 150px;}
+  50%{top:   0px}
+  100%{top: 150px}
 }
 
 @keyframes block {
-  0% { left: 100%; }
-  100% { left: -100%; }
-}
+  0%{left:100%;}
+  100%{left:-100%}
+} 
 
 .animate {
-  animation: jump 500ms;
+  animation: jump 500ms  ;
 }
 
 #lose {
   position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translateX(-50%);
   font-size: 48px;
   font-weight: bold;
   color: #FFD700;
   font-family: 'Press Start 2P', cursive;
 }
 
-/* ---------- Dark mode ---------- */
 
-.night-mode {
+
+/* dark mode */
+
+.night-mode html,
+.night-mode body,
+.night-mode .section,
+.night-mode .box,
+.night-mode .gameDiv {
+  /* Increase specificity by using parent selectors */
   background-color: #0d1117 !important;
+}
+.night-mode .hover-underline-animation {
+  display: inline-block;
+  position: relative;
 }
 
 .night-mode .hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 5px;
+  bottom: 0;
+  left: 0;
   background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.night-mode .hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .night-mode .box {
+  /* Night mode styles for the box div */
   background-image: none;
   background-color: #333;
 }
 
-.night-mode .overlay1,
-.night-mode .overlay2 {
+.night-mode .overlay1 ,
+.night-mode .overlay2  {
   background-color: #0B1F4D;
 }
-
-.night-mode .overlay {
-  background: linear-gradient(to bottom, #0B1F4D, #0B1F4D, black);
+.night-mode .box .overlay {
+  background: linear-gradient(to bottom, #0B1F4D, #0B1F4D ,black);
 }
-
-/* ---------- Night mode toggle ---------- */
 
 #night-mode-label {
   font-size: 6px;
@@ -296,11 +362,23 @@ div {
   padding-top: 10px;
   color: black;
 }
+#light-mode-label {
+  font-size: 6px;
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  margin-right: 2rem;
+  padding-top: 10px;
+  color: #d1d1d1;
+}
 
 input#night-mode-switch {
+  /* Hide the default checkbox */
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+
+  /* Existing styles */
   color: white;
   width: 25px;
   height: 25px;
@@ -312,16 +390,16 @@ input#night-mode-switch {
   position: absolute;
   top: 15px;
   right: 15px;
+  transition: border-color 0.2s;
   transition: all 1s;
-  z-index: 1;
-}
 
+  z-index: 1; 
+}
 input#night-mode-switch:hover {
   border: 2px solid white;
   box-shadow: 0 0 30px white;
+  transition: all 1s;
 }
-
-/* ---------- Cursor trail effect ---------- */
 
 .trail {
   position: absolute;
@@ -330,6 +408,10 @@ input#night-mode-switch:hover {
   background-color: #FFD700;
   opacity: 0.8;
   pointer-events: none;
-  transform: rotateZ(45deg);
+  transform: rotateZ(45deg); 
+}
+
+/* Optionally, add a transition to create a fading effect */
+.trail {
   transition: opacity 0.5s ease-in-out;
 }
