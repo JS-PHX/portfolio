@@ -171,7 +171,7 @@ div {
     font-family: 'Space Grotesk', sans-serif;
     }
 
-  .section .overlay2 .overlay li, .overlay2 overlay {
+  .section .overlay2 .overlay li, .overlay2 .overlay {
     text-align: center;
     font-size: 32px;
     padding: 2rem;

@@ -190,6 +190,7 @@ let isNightMode = false;
 
 nightModeSwitch.addEventListener('click', function() {
   isNightMode = !isNightMode;
+  document.documentElement.classList.toggle('night-mode', isNightMode);
   if (isNightMode) {
     body.classList.add('night-mode');
     document.getElementById("night-mode-label").textContent = "LIGHT"
