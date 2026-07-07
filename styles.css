@@ -29,7 +29,7 @@ div {
   margin-top: 1px;
   font-family: 'Press Start 2P', cursive;
   /* text-decoration: underline 1rem #586F7C; */
-  color: #0044ff;
+  color: #0B3D91;
   font-size: 3rem;
   position: relative;
   cursor: pointer;
@@ -49,7 +49,7 @@ div {
     margin-top: 1px;
     font-family: 'Press Start 2P', cursive;
     /* text-decoration: underline 1rem #586F7C; */
-    color: #0044ff;
+    color: #0B3D91;
     font-size: 3rem;
     position: relative;
     cursor: pointer;
@@ -71,7 +71,7 @@ div {
     height: 5px;
     bottom: 0;
     left: 0;
-    background-color: #B9314F;
+    background-color: #FC3D21;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
@@ -92,7 +92,7 @@ div {
     margin-top: 1px;
     font-family: 'Press Start 2P', cursive;
     /* text-decoration: underline 1rem #586F7C; */
-    color: #0044ff;
+    color: #0B3D91;
     font-size: 3rem;
     scroll-snap-stop: always;
     cursor: pointer;
@@ -104,7 +104,7 @@ div {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, #0044ff, #0044ff ,black);
+    background: linear-gradient(to bottom, #0B3D91, #0B3D91 ,black);
     color: #fff;
     display: flex;
     flex-direction: column;    
@@ -120,7 +120,7 @@ div {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: #0044ff;
+    background: #0B3D91;
     color: white;
     display: flex;
     flex-direction: column;    
@@ -160,11 +160,12 @@ div {
     font-size: 24px;
     font-weight: bold;
     font-family: 'Space Grotesk', sans-serif;
+    border-left: 3px solid #FFD700;
     }
 
   .overlay1 .overlay ul li p {
     list-style-type: "-";
-    color: #0044ff;
+    color: #0B3D91;
     list-style: none;
     font-size: 32px;
     font-weight: bold;
@@ -200,7 +201,7 @@ div {
     transition: all .5s;
   }
   .project-overlay li a:hover {
-    color: #B9314F;
+    color: #FFD700;
     transition: all .1s;
   }
   
@@ -211,7 +212,7 @@ div {
     left: 0;
     width: 0%;
     height: 5px;
-    background-color: #B9314F;
+    background-color: #FC3D21;
     z-index: 9999;
     transition: width 0.2s ease-out;
   }
@@ -286,7 +287,7 @@ div {
   position: absolute;
   font-size: 48px;
   font-weight: bold;
-  color: #0044ff;
+  color: #FFD700;
   font-family: 'Press Start 2P', cursive;
 }
 
@@ -333,10 +334,10 @@ div {
 
 .night-mode .overlay1 ,
 .night-mode .overlay2  {
-  background-color: #001651;
+  background-color: #0B1F4D;
 }
 .night-mode .box .overlay {
-  background: linear-gradient(to bottom, #001651, #001651 ,black);
+  background: linear-gradient(to bottom, #0B1F4D, #0B1F4D ,black);
 }
 
 #night-mode-label {
@@ -368,7 +369,7 @@ input#night-mode-switch {
   color: white;
   width: 25px;
   height: 25px;
-  border: 2px solid #0044ff;
+  border: 2px solid #0B3D91;
   border-radius: 50px;
   background-color: transparent;
   outline: none;
@@ -379,8 +380,7 @@ input#night-mode-switch {
   transition: border-color 0.2s;
   transition: all 1s;
 
-  /* New styles for a cleaner appearance */
-  z-index: 1; /* Ensure the switch appears above other elements */
+  z-index: 1; 
 }
 input#night-mode-switch:hover {
   border: 2px solid white;
@@ -392,10 +392,10 @@ input#night-mode-switch:hover {
   position: absolute;
   width: 20px;
   height: 20px;
-  background-color: #FFD700; /* Set the color to a golden yellow */
+  background-color: #FFD700;
   opacity: 0.8;
   pointer-events: none;
-  transform: rotateZ(45deg); /* Rotate the trail element by 45 degrees */
+  transform: rotateZ(45deg); 
 }
 
 /* Optionally, add a transition to create a fading effect */
