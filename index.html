@@ -8,79 +8,73 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <section class="progress-bar"></section>
+
     <div class="section" style="user-select: none; cursor: default;">
         <input type="checkbox" id="night-mode-switch">
         <div id="night-mode-container"></div>
         <label for="night-mode-switch" id="night-mode-label">DARK</label>
-
         <h2 class="hover-underline-animation">Hello, Welcome!</h2>
     </div>
-    
+
     <div class="section" onclick="toggleOverlay(this)">
-        <h1 class="hover-underline-animation" style="cursor:pointer;">Education</h1>
+        <h1 class="hover-underline-animation">Education</h1>
         <div class="overlay1 overlay">
             <p>Education</p>
             <ul>
                 <li>
-                    <p class="title" style="list-style-type: none; font-size: 40px;">
-                        Estrella Mountain Community College, Avondale, AZ</p>
-                    <p style="font-style:italic;">
-                        Coursework in Web Development
-                    </p>
-                    <br />
-                    <p style="line-height: 3rem; font-size: 28px;">
-                        While pursuing a degree in web development at Estrella Mountain Community College, I recognized the tremendous value in hands-on, self-directed learning. As a result, I decided to focus on independent study and practical application of web development skills. Although I did not complete the formal degree program, I have dedicated significant time and effort to expand my knowledge through online courses, tutorials, and personal projects. This self-guided approach has allowed me to gain comprehensive proficiency in various programming languages, front-end frameworks, and responsive design principles. 
+                    <p class="title">Estrella Mountain Community College, Avondale, AZ</p>
+                    <p style="font-style: italic;">Coursework in Web Development</p>
+                    <p>
+                        While pursuing a degree in web development at Estrella Mountain Community College, I recognized the tremendous value in hands-on, self-directed learning. As a result, I decided to focus on independent study and practical application of web development skills. Although I did not complete the formal degree program, I have dedicated significant time and effort to expand my knowledge through online courses, tutorials, and personal projects. This self-guided approach has allowed me to gain comprehensive proficiency in various programming languages, front-end frameworks, and responsive design principles.
                     </p>
                 </li>
             </ul>
         </div>
     </div>
-    
-    <div class="section" onclick="toggleOverlay(this)">
-        <h1 class="hover-underline-animation" style="cursor:pointer ;">Projects</h1>
-        <div class="overlay2 overlay">
-            <p style="color:FFD700 ;">PROJECTS</p>
-            <ul class="project-overlay">
-                <li><a href="https://js-phx.github.io/bjg-site/" target="_blank">BJG Trucking Inc</a></li>
-                <p>This company website showcases a diverse utilization of web technologies, including HTML, CSS, JavaScript, and React. It encompasses an emailing page and a gallery page to enhance user interaction and provide a seamless browsing experience.</p>
-                <li><a href="https://js-phx.github.io/numerology/" target="_blank">Numerology</a></li>
-                <p>Crafted with essential web technologies like HTML, CSS, and vanilla JavaScript, this project adeptly presents personalized information, tailoring its output according to the user's birthday.</p>
-                <li><a href="https://js-phx.github.io/quote-generator/" target="_blank">Quotes</a></li>
-                <p>Utilizing JavaScript and API integration, this project presents a curated collection of Stoic quotes and baroque art, demonstrating effective use of technical tools to deliver meaningful content.</p>
 
+    <div class="section" onclick="toggleOverlay(this)">
+        <h1 class="hover-underline-animation">Projects</h1>
+        <div class="overlay2 overlay">
+            <p>PROJECTS</p>
+            <ul class="project-overlay">
+                <li><a href="https://js-phx.github.io/bjg-site/" target="_blank">BJG Trucking Inc</a>
+                    <p>This company website showcases a diverse utilization of web technologies, including HTML, CSS, JavaScript, and React. It encompasses an emailing page and a gallery page to enhance user interaction and provide a seamless browsing experience.</p>
+                </li>
+                <li><a href="https://js-phx.github.io/numerology/" target="_blank">Numerology</a>
+                    <p>Crafted with essential web technologies like HTML, CSS, and vanilla JavaScript, this project adeptly presents personalized information, tailoring its output according to the user's birthday.</p>
+                </li>
+                <li><a href="https://js-phx.github.io/quote-generator/" target="_blank">Quotes</a>
+                    <p>Utilizing JavaScript and API integration, this project presents a curated collection of Stoic quotes and baroque art, demonstrating effective use of technical tools to deliver meaningful content.</p>
+                </li>
             </ul>
         </div>
     </div>
-    
+
     <div class="box" onclick="toggleOverlay(this)">
         <h1 class="hover-underline-animation">Experience</h1>
         <div class="overlay">
             <p>EXPERIENCE</p>
             <ul>
-                <li style="font-size: 40px; list-style: none;">Web Developer | BJG Trucking | Phoenix, AZ |</li>
-                <li style="list-style-type: '-' ;">Developed a website from scratch for BJG Trucking using HTML, CSS, JavaScript, and React, resulting in an effective online presence for the company.</li>
-                <li style="list-style-type: '-' ;">Created a responsive and user-friendly design using HTML and CSS, ensuring seamless user experiences across various devices.</li>
-                <li style="list-style-type: '-' ;">Maintained and updated the website, ensuring that the content remained relevant and accurate over time.</li>
-                <li style="list-style-type: '-' ;">Achieved high owner satisfaction with the final website product, contributing to increased brand visibility and customer engagement for BJG Trucking.</li>
-
+                <li class="job-header">Web Developer | BJG Trucking | Phoenix, AZ |</li>
+                <li>Developed a website from scratch for BJG Trucking using HTML, CSS, JavaScript, and React, resulting in an effective online presence for the company.</li>
+                <li>Created a responsive and user-friendly design using HTML and CSS, ensuring seamless user experiences across various devices.</li>
+                <li>Maintained and updated the website, ensuring that the content remained relevant and accurate over time.</li>
+                <li>Achieved high owner satisfaction with the final website product, contributing to increased brand visibility and customer engagement for BJG Trucking.</li>
             </ul>
         </div>
     </div>
-    
 
     <div class="gameDiv">
         <div class="character"></div>
         <div class="block"></div>
         <div id="lose"></div>
     </div>
-    
 
     <script src="script.js"></script>
-
 </body>
 </html>

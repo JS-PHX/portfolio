@@ -172,6 +172,15 @@ div {
   margin-bottom: 0.75rem;
 }
 
+.overlay li.job-header {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  counter-increment: none;
+}
+.overlay li.job-header::before {
+  content: none;
+}
+
 /* Project links */
 .project-overlay li a {
   color: white;
