@@ -35,6 +35,11 @@ div {
   cursor: pointer;
 
 }
+
+.section, .box {
+  margin-top: 0;
+}
+
 .section {
     height: 100vh;
     scroll-snap-align: start;
