@@ -151,6 +151,8 @@ div {
     text-align: left;
     padding: 1.5rem 0;
     font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.6;
   }
   
   .overlay li::before {
@@ -158,14 +160,16 @@ div {
     counter-increment: item;
     display: block;
     font-family: 'Press Start 2P', cursive;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     color: #FFD700;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     letter-spacing: 1px;
   }
   
   .overlay ul {
-    counter-reset: item;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
   }
 
   .overlay1 .overlay ul li p {
