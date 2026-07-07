@@ -146,26 +146,26 @@ div {
     margin-bottom: 5px;
     text-shadow: 1px 1px 1px black;
   }
-  .overlay ul {
-    list-style-type: none;
-    padding: 5rem;
-    margin: 0;
-    text-align: left;
-  }
   .overlay li {
     list-style: none;
-    position: relative;
-    padding-left: 1.5rem;
+    text-align: left;
+    padding: 1.5rem 0;
     font-family: 'Space Grotesk', sans-serif;
-
   }
+  
   .overlay li::before {
-    content: "▸";
+    content: "[ " counter(item) " ]";
+    counter-increment: item;
+    display: block;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
     color: #FFD700;
-    position: absolute;
-    left: 0;
-    font-family: 'Space Grotesk', sans-serif;
-
+    margin-bottom: 0.75rem;
+    letter-spacing: 1px;
+  }
+  
+  .overlay ul {
+    counter-reset: item;
   }
 
   .overlay1 .overlay ul li p {
