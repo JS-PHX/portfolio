@@ -1,0 +1,398 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    background-color: #d1d1d1;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+div {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-home {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  font-family: 'Press Start 2P', cursive;
+  /* text-decoration: underline 1rem #586F7C; */
+  color: #0044ff;
+  font-size: 3rem;
+  position: relative;
+  cursor: pointer;
+
+}
+.section {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+    font-family: 'Press Start 2P', cursive;
+    /* text-decoration: underline 1rem #586F7C; */
+    color: #0044ff;
+    font-size: 3rem;
+    position: relative;
+    cursor: pointer;
+
+  }
+
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    user-select: none;
+    cursor: default;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: #B9314F;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .box {
+    background-image: linear-gradient(180deg, #d1d1d100, #b2b2b2, #868686 ,black);
+    position: relative;
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+    font-family: 'Press Start 2P', cursive;
+    /* text-decoration: underline 1rem #586F7C; */
+    color: #0044ff;
+    font-size: 3rem;
+    scroll-snap-stop: always;
+    cursor: pointer;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #0044ff, #0044ff ,black);
+    color: #fff;
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    justify-content: center;text-align: center;
+    transition: transform .5s ease;
+    cursor: pointer;
+  }
+  
+  .overlay1, .overlay2 {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #0044ff;
+    color: white;
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    opacity: 0;
+    cursor: pointer;
+    }
+  
+  .overlay.active, .overlay1.active, .overlay2.active {
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    backdrop-filter: blur(50px);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .overlay p .info {
+    font-size: 56px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 1px black;
+  }
+  .overlay ul {
+    list-style-type: none;
+    padding: 5rem;
+    margin: 0;
+    text-align: left;
+  }
+  .overlay li {
+    /* list-style-type: "-"; */
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+  }
+
+  .overlay1 overlay ul li p {
+    list-style-type: "-";
+    color: #0044ff;
+    list-style: none;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+  }
+
+  .section .overlay2 .overlay li, .overlay2 overlay {
+    text-align: center;
+    font-size: 32px;
+    padding: 2rem;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+  }
+
+  .project-overlay {
+    text-align: right;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .project-overlay li {
+    font-size: 32px;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    list-style-type: "-";
+    padding: 2rem;
+  }
+
+  .project-overlay li a {
+    color: white;
+    transition: all .5s;
+  }
+  .project-overlay li a:hover {
+    color: #B9314F;
+    transition: all .1s;
+  }
+  
+
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: #B9314F;
+    z-index: 9999;
+    transition: width 0.2s ease-out;
+  }
+
+  
+
+
+
+
+/* game */
+
+.gameDiv {
+  background-image: url("/imgs/spacebg.jpg");
+  background-size: 250% auto; /* or any other value to adjust the width */
+  animation: move-background 90s linear alternate;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move-background {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+.game {
+  width: 100%;
+  height: 100vh;
+  border-bottom: 1px solid black;
+}
+
+.character {
+  background-image: url('./imgs/astro.png');
+  position: relative;
+  top: 150px;
+  left: 50px;
+  background-repeat: no-repeat;
+  /* background-color: red; */
+  width: 90px;
+  height: 100px;
+}
+
+.block {
+  background-image: url('./imgs/asteroid.png');
+  position: relative;
+  top: 165px;
+  left: 480px;
+  /* background-color: blue; */
+  width: 50px;
+  height: 50px;
+  animation: block 2s infinite linear;
+}
+
+@keyframes jump {
+  0%{top: 150px;}
+  50%{top:   0px}
+  100%{top: 150px}
+}
+
+@keyframes block {
+  0%{left:100%;}
+  100%{left:-100%}
+} 
+
+.animate {
+  animation: jump 500ms  ;
+}
+
+#lose {
+  position: absolute;
+  font-size: 48px;
+  font-weight: bold;
+  color: #0044ff;
+  font-family: 'Press Start 2P', cursive;
+}
+
+
+
+/* dark mode */
+
+.night-mode html,
+.night-mode body,
+.night-mode .section,
+.night-mode .box,
+.night-mode .gameDiv {
+  /* Increase specificity by using parent selectors */
+  background-color: black !important;
+}
+.night-mode .hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.night-mode .hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.night-mode .hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.night-mode .box {
+  /* Night mode styles for the box div */
+  background-image: none;
+  background-color: #333;
+}
+
+.night-mode .overlay1 ,
+.night-mode .overlay2  {
+  background-color: #001651;
+}
+.night-mode .box .overlay {
+  background: linear-gradient(to bottom, #001651, #001651 ,black);
+}
+
+#night-mode-label {
+  font-size: 6px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  margin-right: 2rem;
+  padding-top: 10px;
+  color: black;
+}
+#light-mode-label {
+  font-size: 6px;
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  margin-right: 2rem;
+  padding-top: 10px;
+  color: #d1d1d1;
+}
+
+input#night-mode-switch {
+  /* Hide the default checkbox */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* Existing styles */
+  color: white;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #0044ff;
+  border-radius: 50px;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  transition: border-color 0.2s;
+  transition: all 1s;
+
+  /* New styles for a cleaner appearance */
+  z-index: 1; /* Ensure the switch appears above other elements */
+}
+input#night-mode-switch:hover {
+  border: 2px solid white;
+  box-shadow: 0 0 30px white;
+  transition: all 1s;
+}
+
+.trail {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #FFD700; /* Set the color to a golden yellow */
+  opacity: 0.8;
+  pointer-events: none;
+  transform: rotateZ(45deg); /* Rotate the trail element by 45 degrees */
+}
+
+/* Optionally, add a transition to create a fading effect */
+.trail {
+  transition: opacity 0.5s ease-in-out;
+}
