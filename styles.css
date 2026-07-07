@@ -142,7 +142,7 @@ div {
 
   .overlay p,
   .overlay li {
-  line-height: 1.5;
+  line-height: 1.25;
 }
 
   .overlay p .info {
@@ -203,9 +203,8 @@ div {
   }
   .project-overlay li {
     font-size: 32px;
-    color: white;
     font-family: 'Press Start 2P', cursive;
-    color:FFD700;
+    color: #FFD700;
     list-style-type: "-";
     padding: 2rem;
   }
