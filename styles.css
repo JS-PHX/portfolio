@@ -140,6 +140,11 @@ div {
     pointer-events: auto;
   }
 
+  .overlay p,
+  .overlay li {
+  line-height: 1.5;
+}
+
   .overlay p .info {
     font-size: 56px;
     font-family: 'Space Grotesk', sans-serif;
@@ -152,7 +157,6 @@ div {
     padding: 1.5rem 0;
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.25rem;
-    line-height: 1.6;
   }
   
   .overlay li::before {
