@@ -294,7 +294,7 @@ div {
 .night-mode .box,
 .night-mode .gameDiv {
   /* Increase specificity by using parent selectors */
-  background-color: black !important;
+  background-color: #0d1117 !important;
 }
 .night-mode .hover-underline-animation {
   display: inline-block;
