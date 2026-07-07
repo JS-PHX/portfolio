@@ -153,15 +153,16 @@ div {
     text-align: left;
   }
   .overlay li {
-    /* list-style-type: "-"; */
-    padding: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    font-size: 24px;
-    font-weight: bold;
-    font-family: 'Space Grotesk', sans-serif;
-    border-left: 3px solid #FFD700;
-    }
+    list-style: none;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  .overlay li::before {
+    content: "▸";
+    color: #FFD700;
+    position: absolute;
+    left: 0;
+  }
 
   .overlay1 .overlay ul li p {
     list-style-type: "-";
