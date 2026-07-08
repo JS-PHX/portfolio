@@ -39,7 +39,7 @@ div {
 }
 
 .box {
-  background-image: linear-gradient(180deg, #d1d1d100, #4a5a7a, #0B1F4D, black);
+  background-image: linear-gradient(0deg, #d1d1d100, #b8c2d1, #7a94b8);
   scroll-snap-stop: always;
 }
 
