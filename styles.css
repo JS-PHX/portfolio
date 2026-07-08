@@ -278,9 +278,8 @@ div {
 }
 
 .night-mode .box {
-  background-image: linear-gradient(180deg, #0d1117, #0B1F4D, black);
+  background-image: none;
 }
-
 .night-mode .overlay1,
 .night-mode .overlay2 {
   background-color: #0B1F4D;
