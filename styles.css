@@ -39,8 +39,18 @@ div {
 }
 
 .box {
-  background-image: linear-gradient(180deg, #d1d1d100, #4a5a7a, #0B1F4D, black);
+  background-image: linear-gradient(180deg, #d1d1d100, #b8c2d1, #7a94b8);
+  position: relative;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', cursive;
+  color: #0B3D91;
+  font-size: 3rem;
   scroll-snap-stop: always;
+  cursor: pointer;
 }
 
 /* ---------- Hover underline animation ---------- */
@@ -278,7 +288,8 @@ div {
 }
 
 .night-mode .box {
-  background-image: none;
+  background-image: linear-gradient(180deg, #0d1117, #0B1F4D, black);
+  background-color: transparent;
 }
 .night-mode .overlay1,
 .night-mode .overlay2 {
